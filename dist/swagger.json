@@ -16,7 +16,7 @@
         }
     ],
     "paths": {
-        "/Login": {
+        "/0001Login": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -56,7 +56,7 @@
                 }
             }
         },
-        "/Logout": {
+        "/0003Logout": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -96,7 +96,7 @@
                 }
             }
         },
-        "/LogoutAll": {
+        "/0004LogoutAll": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -136,7 +136,7 @@
                 }
             }
         },
-        "/SignUp": {
+        "/0006SignUp": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -176,7 +176,7 @@
                 }
             }
         },
-        "/ValidateAccount": {
+        "/0010ValidateAccount": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -216,7 +216,7 @@
                 }
             }
         },
-        "/VerifyAccount": {
+        "/0012VerifyAccount": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -256,7 +256,7 @@
                 }
             }
         },
-        "/ResetPassword": {
+        "/0014ResetPassword": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -296,7 +296,7 @@
                 }
             }
         },
-        "/VerifyResetPassword": {
+        "/0016VerifyResetPassword": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -336,7 +336,7 @@
                 }
             }
         },
-        "/AffiliationUser": {
+        "/0023AffiliationUser": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -376,7 +376,7 @@
                 }
             }
         },
-        "/GetDeviceDataHash": {
+        "/0073GetDeviceDataHash": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -416,7 +416,7 @@
                 }
             }
         },
-        "/GetDeviceData": {
+        "/0075GetDeviceData": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -450,7 +450,7 @@
                 }
             }
         },
-        "/notification_preference_list": {
+        "/0113notification_preference_list": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -490,7 +490,7 @@
                 }
             }
         },
-        "/GetAlmondMode": {
+        "/0151GetAlmondMode": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -530,7 +530,7 @@
                 }
             }
         },
-        "/AddNotificationReg": {
+        "/0281AddNotificationReg": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -570,7 +570,7 @@
                 }
             }
         },
-        "/DeleteNotificationReg": {
+        "/0283DeleteNotificationReg": {
             "delete": {
                 "tags": [
                     "XML_commands"
@@ -610,7 +610,7 @@
                 }
             }
         },
-        "/NotificationPreferance_check_my_regid": {
+        "/0291NotificationPreferance_check_my_regid": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -650,7 +650,7 @@
                 }
             }
         },
-        "/NotificationPreferance_update_notification_preferences": {
+        "/0300NotificationPreferance_update_notification_preferences": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -690,7 +690,7 @@
                 }
             }
         },
-        "/NotificationPreferance_get_notifications": {
+        "/0800NotificationPreferance_get_notifications": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -730,7 +730,7 @@
                 }
             }
         },
-        "/NotificationPreferance_get_logs": {
+        "/0804NotificationPreferance_get_logs": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -770,7 +770,7 @@
                 }
             }
         },
-        "/NotificationPreferance_clear_the_badge": {
+        "/0806NotificationPreferance_clear_the_badge": {
             "get": {
                 "tags": [
                     "XML_commands"
