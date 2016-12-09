@@ -1,0 +1,1359 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.0.1",
+        "title": "Account Manager JSON commands",
+        "description": "DeleteAccount, UnlinkAlmond, GetAlmondList, AlmondAffiliationData, UserProfile, UserInvite, DeleteSecondaryUser, DeleteMeAsSecondaryUser, UpdateUserProfile, ChangePassword\n"
+    },
+    "tags": [
+        {
+            "name": "JSON_Commands",
+            "description": "New JSON Account Commands"
+        },
+        {
+            "name": "XML_commands",
+            "description": "Old XML commands"
+        }
+    ],
+    "paths": {
+        "/Login": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "Login to the account",
+                "operationId": "Login",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "Login Request",
+                        "in": "body",
+                        "description": "login",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/LoginRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/LoginResponse"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/Logout": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "logout",
+                "operationId": "Logout",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "Logout Request",
+                        "in": "body",
+                        "description": "logout",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CommandRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/LogoutAll": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "Logout all",
+                "operationId": "LogoutAll",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "LogoutAll Request",
+                        "in": "body",
+                        "description": "logout all",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/LogoutAllRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/SignUp": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "Signup",
+                "operationId": "SignUp",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "SignUp Request",
+                        "in": "body",
+                        "description": "signup credentials",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SignUpRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/ValidateAccount": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "validateaccount",
+                "operationId": "ValidateAccount",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "ValidateAccount Request",
+                        "in": "body",
+                        "description": "validate email",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ValidateAccountRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/VerifyAccount": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "verify account",
+                "operationId": "VerifyAccount",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "VerifyAccount Request",
+                        "in": "body",
+                        "description": "verify account",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/VerifyAccountRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/ResetPassword": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "reset password",
+                "operationId": "ResetPassword",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "ResetPassword Request",
+                        "in": "body",
+                        "description": "reset password",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ResetPasswordRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/VerifyResetPassword": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "verify resetpassword",
+                "operationId": "Verify reset password",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "VerifyResetPassword Request",
+                        "in": "body",
+                        "description": "verify account",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/VerifyResetPasswordRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/AffiliationUser": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "Affiliation_User_Request",
+                "operationId": "Affiliation_User_Request",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "AffiliationUser Request",
+                        "in": "body",
+                        "description": "Affiliation_User_Request",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AffiliationUserRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/AffiliationUserResponse"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/GetDeviceDataHash": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "GetDeviceDataHash",
+                "operationId": "GetDeviceDataHash",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "GetDeviceDataHash Request",
+                        "in": "body",
+                        "description": "GetDeviceDataHash",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DeviceDataHashRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DeviceDataHashResponse"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/GetDeviceData": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "GetDeviceData",
+                "operationId": "GetDeviceData",
+                "parameters": [
+                    {
+                        "name": "GetDeviceData Request",
+                        "in": "body",
+                        "description": "GetDeviceData",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/GetListRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DeviceDataResponse"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/notification_preference_list": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "notification_preference_list",
+                "operationId": "notification_preference_list",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "notification_preference_list Request",
+                        "in": "body",
+                        "description": "notification_preference_list",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/GetListRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/NotificationPreferenceList"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/GetAlmondMode": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "GetAlmondMode",
+                "operationId": "GetAlmondMode",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "GetAlmondMode Request",
+                        "in": "body",
+                        "description": "GetAlmondMode",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/GetListRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/AlmondModeResponse"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/AddNotificationReg": {
+            "post": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "AddNotificationReg",
+                "operationId": "AddNotificationReg",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "AddNotificationReg Request",
+                        "in": "body",
+                        "description": "AddNotificationReg",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NotificationReg"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/DeleteNotificationReg": {
+            "delete": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "DeleteNotificationReg",
+                "operationId": "DeleteNotificationReg",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "DeleteNotificationReg Request",
+                        "in": "body",
+                        "description": "DeleteNotificationReg",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NotificationReg"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/NotificationPreferance_check_my_regid": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "NotificationPreferance_check_my_regid",
+                "operationId": "NotificationPreferance_check_my_regid",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "NotificationPreferances Request",
+                        "in": "body",
+                        "description": "NotificationPreferance_check_my_regid",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NotificationPreferances"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/NotificationPreferance_update_notification_preferences": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "NotificationPreferance_update_notification_preferences",
+                "operationId": "NotificationPreferance_update_notification_preferences",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "NotificationPreferances Request",
+                        "in": "body",
+                        "description": "NotificationPreferance_update_notification_preferences",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NotificationPreferances"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/NotificationPreferance_get_notifications": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "NotificationPreferance_get_notifications",
+                "operationId": "NotificationPreferance_get_notifications",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "NotificationPreferances Request",
+                        "in": "body",
+                        "description": "NotificationPreferance_get_notifications",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NotificationPreferances"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/NotificationPreferance_get_logs": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "NotificationPreferance_get_logs",
+                "operationId": "NotificationPreferance_get_logs",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "NotificationPreferances Request",
+                        "in": "body",
+                        "description": "NotificationPreferance_get_logs",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NotificationPreferances"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        },
+        "/NotificationPreferance_clear_the_badge": {
+            "get": {
+                "tags": [
+                    "XML_commands"
+                ],
+                "description": "NotificationPreferance_clear_the_badge",
+                "operationId": "NotificationPreferance_clear_the_badge",
+                "consumes": [
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "NotificationPreferances Request",
+                        "in": "body",
+                        "description": "NotificationPreferance_clear_the_badge",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NotificationPreferances"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success true response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultTrue"
+                        }
+                    },
+                    "default": {
+                        "description": "error response",
+                        "schema": {
+                            "$ref": "#/definitions/DefaultFalse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "NotificationPreferances": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "AlmondMAC",
+                "UserID",
+                "Preference",
+                "DeviceID",
+                "MobileInternalIndex"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Preference": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "DeviceID": {
+                    "type": "string"
+                },
+                "MobileInternalIndex": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "NotificationReg": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "RegID",
+                "Platform"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "RegID": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Platform": {
+                    "type": "string"
+                }
+            }
+        },
+        "AlmondModeResponse": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Success",
+                "AlmondMAC",
+                "AlmondMode",
+                "ModeSetBy"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "Success": {
+                    "type": "string"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "AlmondMode": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "Home(1) or Away(2)"
+                },
+                "ModeSetBy": {
+                    "type": "string",
+                    "description": "The emailID of the user who set the mode"
+                }
+            }
+        },
+        "NotificationPreferenceList": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Success",
+                "AlmondMAC",
+                "Preferance Count",
+                "ID",
+                "Index",
+                "Mode"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "Success": {
+                    "type": "string"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Preferance Count": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Index": {
+                    "type": "string"
+                },
+                "Mode": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "DeviceDataResponse": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Success",
+                "ID",
+                "Name",
+                "AssociationTimestamp",
+                "Type",
+                "Location",
+                "LastActiveEpoch",
+                "Manufacturer",
+                "Version",
+                "Model"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "Success": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "AssociationTimestamp": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Type": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Location": {
+                    "type": "string"
+                },
+                "LastActiveEpoch": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Manufacturer": {
+                    "type": "string"
+                },
+                "Version": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Model": {
+                    "type": "string"
+                }
+            }
+        },
+        "DeviceDataHashResponse": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Success",
+                "StaticDeviceListHash"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "Success": {
+                    "type": "string"
+                },
+                "StaticDeviceListHash": {
+                    "type": "string"
+                }
+            }
+        },
+        "GetListRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "AlmondMAC"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "DeviceDataHashRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "AlmondMAC"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "AffiliationUserResponse": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "AlmondMAC",
+                "AlmondName",
+                "SSID",
+                "Password"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "AlmondName": {
+                    "type": "string"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "SSID": {
+                    "type": "string",
+                    "description": "wifi SSID"
+                },
+                "Password": {
+                    "type": "string",
+                    "description": "wifi password"
+                }
+            }
+        },
+        "AffiliationUserRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Code"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "Code": {
+                    "type": "string",
+                    "description": "Code shown on the almond screen"
+                }
+            }
+        },
+        "VerifyResetPasswordRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "EmailID",
+                "NewPassword",
+                "token"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "EmailID": {
+                    "type": "string"
+                },
+                "token": {
+                    "type": "string",
+                    "description": "verification token received in the mail"
+                },
+                "NewPassword": {
+                    "type": "string"
+                }
+            }
+        },
+        "ResetPasswordRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "EmailID"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "EmailID": {
+                    "type": "string",
+                    "description": "The emailID to which reset password link has to be sent"
+                }
+            }
+        },
+        "VerifyAccountRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "EmailID",
+                "token"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "EmailID": {
+                    "type": "string"
+                },
+                "token": {
+                    "type": "string",
+                    "description": "The validation token received in the email"
+                }
+            }
+        },
+        "SignUpRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "EmailID",
+                "Password"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "EmailID": {
+                    "type": "string",
+                    "description": "EmailID in which securifi account has to be created"
+                },
+                "Password": {
+                    "type": "string",
+                    "description": "Choose your securifi account password"
+                }
+            }
+        },
+        "ValidateAccountRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "EmailID"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string",
+                    "description": "validate"
+                },
+                "EmailID": {
+                    "type": "string",
+                    "description": "The emailID to which the validating link has to be sent"
+                }
+            }
+        },
+        "LogoutAllRequest": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "EmailID",
+                "Password"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string",
+                    "description": "Login"
+                },
+                "EmailID": {
+                    "type": "string",
+                    "description": "EmailID as credential"
+                },
+                "Password": {
+                    "type": "string",
+                    "description": "Password as credential"
+                }
+            }
+        },
+        "LoginRequest": {
+            "type": "object",
+            "required": [
+                "CommandType"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string",
+                    "description": "Login"
+                },
+                "EmailID": {
+                    "type": "string",
+                    "description": "Password is required along with EmailID"
+                },
+                "Password": {
+                    "type": "string",
+                    "description": "EmailID is required along with password"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "TempPass is required along with UserID for auto login"
+                },
+                "Temppass": {
+                    "type": "string",
+                    "description": "UserID is required along with Temppass for auto login"
+                }
+            }
+        },
+        "LoginResponse": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Success",
+                "UserID",
+                "TempPass",
+                "IsActivated",
+                "MinutesRemaining"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string",
+                    "description": "Login"
+                },
+                "Success": {
+                    "type": "string"
+                },
+                "UserID": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "UserID to be stored in the app, and used for auto logins"
+                },
+                "TempPass": {
+                    "type": "string",
+                    "description": "Temporary password to be used for auto logins"
+                },
+                "IsActivated": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "MinutesRemaining": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "DefaultTrue": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Success"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string",
+                    "enum": [
+                        "DeleteAccountResponse",
+                        "ChangePasswordResponse"
+                    ]
+                },
+                "Success": {
+                    "type": "string",
+                    "example": "true"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 251176216342984
+                }
+            }
+        },
+        "DefaultFalse": {
+            "type": "object",
+            "required": [
+                "CommandType",
+                "Success",
+                "Reason"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string",
+                    "enum": [
+                        "DeleteAccountResponse",
+                        "UnlinkAlmondResponse"
+                    ]
+                },
+                "Success": {
+                    "type": "string",
+                    "example": "false"
+                },
+                "Reason": {
+                    "type": "integer",
+                    "enum": [
+                        1,
+                        2,
+                        3,
+                        21
+                    ],
+                    "format": "int32",
+                    "description": "The reason code why the request failed to complete"
+                },
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 251176216342984
+                }
+            }
+        },
+        "CommandRequest": {
+            "type": "object",
+            "description": "Requests with just the commandType",
+            "required": [
+                "CommandType"
+            ],
+            "properties": {
+                "CommandType": {
+                    "type": "string",
+                    "enum": [
+                        "GetAlmondList",
+                        "AffiliationData",
+                        "UserProfileRequest"
+                    ]
+                }
+            }
+        }
+    }
+}
