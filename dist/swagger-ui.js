@@ -312,8 +312,8 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
     var commandID = ((depth0.path.split('')).slice(1,5)).join('');
     var method = ((depth0.path.split('')).slice(5)).join('');
     //////////////////////fmp52
-  return "  <ul class='operations' >\n    <li class='get"
-    //+ ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.method : depth0),{"name":"escape","hash":{},"data":"get"})) != null ? stack1 : "")
+  return "  <ul class='operations' >\n    <li class='"
+    + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.method : depth0),{"name":"escape","hash":{},"data":"get"})) != null ? stack1 : "")
     + " operation' id='"
     + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.parentId : depth0),{"name":"escape","hash":{},"data":data})) != null ? stack1 : "")
     + "_"
