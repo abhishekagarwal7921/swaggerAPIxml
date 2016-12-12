@@ -364,7 +364,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/AffiliationUserResponse"
+                            "$ref": "#/definitions/AffiliationUserCompleteResponse"
                         }
                     },
                     "default": {
@@ -510,7 +510,7 @@
                         "description": "GetAlmondMode",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/GetListRequest"
+                            "$ref": "#/definitions/AlmondModeRequest"
                         }
                     }
                 ],
@@ -867,25 +867,35 @@
                 }
             }
         },
+        "AlmondModeRequest": {
+            "type": "object",
+            "required": [
+                "AlmondMAC"
+            ],
+            "properties": {
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 251176215907188
+                }
+            }
+        },
         "AlmondModeResponse": {
             "type": "object",
             "required": [
-                "CommandType",
                 "Success",
                 "AlmondMAC",
                 "AlmondMode",
                 "ModeSetBy"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "Success": {
                     "type": "string"
                 },
                 "AlmondMAC": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
+                    "example": 251176215907188
                 },
                 "AlmondMode": {
                     "type": "integer",
@@ -894,6 +904,7 @@
                 },
                 "ModeSetBy": {
                     "type": "string",
+                    "example": "abc@m.com",
                     "description": "The emailID of the user who set the mode"
                 }
             }
@@ -1044,25 +1055,23 @@
                 }
             }
         },
-        "AffiliationUserResponse": {
+        "AffiliationUserCompleteResponse": {
             "type": "object",
             "required": [
-                "CommandType",
                 "AlmondMAC",
                 "AlmondName",
                 "SSID",
                 "Password"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "AlmondName": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "AlmondGroundFloor"
                 },
                 "AlmondMAC": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
+                    "example": 251176217040992
                 },
                 "SSID": {
                     "type": "string",
@@ -1077,13 +1086,9 @@
         "AffiliationUserRequest": {
             "type": "object",
             "required": [
-                "CommandType",
                 "Code"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "Code": {
                     "type": "string",
                     "description": "Code shown on the almond screen"
