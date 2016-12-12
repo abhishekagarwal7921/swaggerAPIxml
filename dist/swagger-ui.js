@@ -259,7 +259,7 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
 },"5":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "        <h4><span data-sw-translate>Description01</span></h4>\n        <div class=\"markdown\">"
+  return "        <h4><span data-sw-translate>Description</span></h4>\n        <div class=\"markdown\">"
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.description : depth0),{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
     + "</div>\n";
 },"7":function(container,depth0,helpers,partials,data) {
@@ -281,7 +281,7 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
 },"12":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "          <h4 data-sw-translate>Headers</h4>\n          <table class=\"headers\">\n            <thead>\n              <tr>\n                <th style=\"width: 100px; max-width: 100px\" data-sw-translate>Header</th>\n                <th style=\"width: 310px; max-width: 310px\" data-sw-translate>Description02</th>\n                <th style=\"width: 200px; max-width: 200px\" data-sw-translate>Type</th>\n                <th style=\"width: 320px; max-width: 320px\" data-sw-translate>Other</th>\n              </tr>\n            </thead>\n            <tbody>\n"
+  return "          <h4 data-sw-translate>Headers</h4>\n          <table class=\"headers\">\n            <thead>\n              <tr>\n                <th style=\"width: 100px; max-width: 100px\" data-sw-translate>Header</th>\n                <th style=\"width: 310px; max-width: 310px\" data-sw-translate>Description</th>\n                <th style=\"width: 200px; max-width: 200px\" data-sw-translate>Type</th>\n                <th style=\"width: 320px; max-width: 320px\" data-sw-translate>Other</th>\n              </tr>\n            </thead>\n            <tbody>\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.headers : depth0),{"name":"each","hash":{},"fn":container.program(13, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "            </tbody>\n          </table>\n";
 },"13":function(container,depth0,helpers,partials,data) {
