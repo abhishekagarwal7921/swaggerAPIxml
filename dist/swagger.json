@@ -181,8 +181,8 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "validateaccount",
-                "operationId": "ValidateAccount",
+                "description": "validate account with the email",
+                "operationId": "Validate Account",
                 "consumes": [
                     "application/xml"
                 ],
@@ -222,7 +222,7 @@
                     "XML_commands"
                 ],
                 "description": "verify account",
-                "operationId": "VerifyAccount",
+                "operationId": "Verify Account",
                 "consumes": [
                     "application/xml"
                 ],
@@ -341,8 +341,8 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "Affiliation_User_Request",
-                "operationId": "Affiliation_User_Request",
+                "description": "Affiliation User Request",
+                "operationId": "Affiliation User Request",
                 "consumes": [
                     "application/xml"
                 ],
@@ -381,7 +381,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "GetDeviceDataHash",
+                "description": "Get Device Data Hash",
                 "operationId": "GetDeviceDataHash",
                 "consumes": [
                     "application/xml"
@@ -393,7 +393,7 @@
                     {
                         "name": "GetDeviceDataHash Request",
                         "in": "body",
-                        "description": "GetDeviceDataHash",
+                        "description": "Get Device Data Hash",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/DeviceDataHashRequest"
@@ -421,13 +421,13 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "GetDeviceData",
+                "description": "Get Device Data",
                 "operationId": "GetDeviceData",
                 "parameters": [
                     {
                         "name": "GetDeviceData Request",
                         "in": "body",
-                        "description": "GetDeviceData",
+                        "description": "Get Device Data",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/GetListRequest"
@@ -455,7 +455,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "notification_preference_list",
+                "description": "notification preference list",
                 "operationId": "notification_preference_list",
                 "consumes": [
                     "application/xml"
@@ -467,7 +467,7 @@
                     {
                         "name": "notification_preference_list Request",
                         "in": "body",
-                        "description": "notification_preference_list",
+                        "description": "notification preference list",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/GetListRequest"
@@ -495,7 +495,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "GetAlmondMode",
+                "description": "Get Almond Mode",
                 "operationId": "GetAlmondMode",
                 "consumes": [
                     "application/xml"
@@ -507,7 +507,7 @@
                     {
                         "name": "GetAlmondMode Request",
                         "in": "body",
-                        "description": "GetAlmondMode",
+                        "description": "Get Almond Mode",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/AlmondModeRequest"
@@ -535,7 +535,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "AddNotificationReg",
+                "description": "Add Notification Reg",
                 "operationId": "AddNotificationReg",
                 "consumes": [
                     "application/xml"
@@ -547,7 +547,7 @@
                     {
                         "name": "AddNotificationReg Request",
                         "in": "body",
-                        "description": "AddNotificationReg",
+                        "description": "Add Notification Reg",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/NotificationReg"
@@ -575,7 +575,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "DeleteNotificationReg",
+                "description": "Delete Notification Reg",
                 "operationId": "DeleteNotificationReg",
                 "consumes": [
                     "application/xml"
@@ -587,7 +587,7 @@
                     {
                         "name": "DeleteNotificationReg Request",
                         "in": "body",
-                        "description": "DeleteNotificationReg",
+                        "description": "Delete Notification Reg",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/NotificationReg"
@@ -615,7 +615,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "NotificationPreferance_check_my_regid",
+                "description": "Notification Preferance check my regid",
                 "operationId": "NotificationPreferance_check_my_regid",
                 "consumes": [
                     "application/xml"
@@ -627,7 +627,7 @@
                     {
                         "name": "NotificationPreferances Request",
                         "in": "body",
-                        "description": "NotificationPreferance_check_my_regid",
+                        "description": "Notification Preferance check my regid",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/NotificationPreferances"
@@ -655,7 +655,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "NotificationPreferance_update_notification_preferences",
+                "description": "Notification Preferance: update notification preferences",
                 "operationId": "NotificationPreferance_update_notification_preferences",
                 "consumes": [
                     "application/xml"
@@ -667,7 +667,7 @@
                     {
                         "name": "NotificationPreferances Request",
                         "in": "body",
-                        "description": "NotificationPreferance_update_notification_preferences",
+                        "description": "update notification preferences",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/NotificationPreferances"
@@ -695,7 +695,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "NotificationPreferance_get_notifications",
+                "description": "Notification Preferance: get notifications",
                 "operationId": "NotificationPreferance_get_notifications",
                 "consumes": [
                     "application/xml"
@@ -707,7 +707,7 @@
                     {
                         "name": "NotificationPreferances Request",
                         "in": "body",
-                        "description": "NotificationPreferance_get_notifications",
+                        "description": "get notifications",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/NotificationPreferances"
@@ -735,7 +735,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "NotificationPreferance_get_logs",
+                "description": "Notification Preferance: get logs",
                 "operationId": "NotificationPreferance_get_logs",
                 "consumes": [
                     "application/xml"
@@ -747,7 +747,7 @@
                     {
                         "name": "NotificationPreferances Request",
                         "in": "body",
-                        "description": "NotificationPreferance_get_logs",
+                        "description": "get logs",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/NotificationPreferances"
@@ -775,7 +775,7 @@
                 "tags": [
                     "XML_commands"
                 ],
-                "description": "NotificationPreferance_clear_the_badge",
+                "description": "Notification Preferance: clear the badge",
                 "operationId": "NotificationPreferance_clear_the_badge",
                 "consumes": [
                     "application/xml"
@@ -787,7 +787,7 @@
                     {
                         "name": "NotificationPreferances Request",
                         "in": "body",
-                        "description": "NotificationPreferance_clear_the_badge",
+                        "description": "clear the badge",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/NotificationPreferances"
