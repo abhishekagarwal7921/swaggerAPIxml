@@ -1213,10 +1213,6 @@
         "LoginRequest": {
             "type": "object",
             "properties": {
-                "CommandType": {
-                    "type": "string",
-                    "description": "Login"
-                },
                 "EmailID": {
                     "type": "string",
                     "description": "Password is required along with EmailID"
