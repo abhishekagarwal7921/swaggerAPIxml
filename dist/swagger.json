@@ -204,7 +204,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -244,7 +244,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -284,7 +284,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -324,7 +324,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -558,7 +558,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -598,7 +598,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -638,7 +638,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -678,7 +678,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -718,7 +718,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -758,7 +758,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -798,7 +798,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/Request_Response 'true'"
                         }
                     },
                     "default": {
@@ -1182,14 +1182,9 @@
         "ValidateAccountRequest": {
             "type": "object",
             "required": [
-                "CommandType",
                 "EmailID"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string",
-                    "description": "validate"
-                },
                 "EmailID": {
                     "type": "string",
                     "description": "The emailID to which the validating link has to be sent"
@@ -1341,28 +1336,19 @@
                 }
             }
         },
-        "DefaultTrue": {
+        "Request_Response 'true'": {
             "type": "object",
             "required": [
-                "CommandType",
                 "Success"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string",
-                    "enum": [
-                        "DeleteAccountResponse",
-                        "ChangePasswordResponse"
-                    ]
-                },
                 "Success": {
                     "type": "string",
                     "example": "true"
                 },
-                "AlmondMAC": {
-                    "type": "integer",
-                    "format": "int64",
-                    "example": 251176216342984
+                "Reason":{
+                    "type": "string",
+                    "example": "request completed"
                 }
             }
         },
