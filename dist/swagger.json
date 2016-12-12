@@ -76,7 +76,7 @@
                         "description": "logout",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/Logout"
+                            "$ref": "#/definitions/root"
                         }
                     }
                 ],
@@ -130,7 +130,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/LoginResponse false"
                         }
                     }
                 }
@@ -156,7 +156,7 @@
                         "description": "signup credentials",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/SignUpRequest"
+                            "$ref": "#/definitions/Signup"
                         }
                     }
                 ],
@@ -164,13 +164,13 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/SignupResponse"
                         }
                     },
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/LoginResponse false"
                         }
                     }
                 }
@@ -1150,17 +1150,27 @@
                 }
             }
         },
-        "SignUpRequest": {
+        "SignupResponse": {
             "type": "object",
             "required": [
-                "CommandType",
+                "Success",
+                "Reason"
+            ],
+            "properties": {
+                "Success": {
+                    "type": "string",
+                    "example":"true"
+                },
+                "Reason": {}
+            }
+        },
+        "Signup": {
+            "type": "object",
+            "required": [
                 "EmailID",
                 "Password"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "EmailID": {
                     "type": "string",
                     "description": "EmailID in which securifi account has to be created"
@@ -1188,7 +1198,7 @@
                 }
             }
         },
-        "Logout": {
+        "root": {
             "type": "object",
             "properties": {}
         },
