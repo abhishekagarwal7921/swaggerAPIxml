@@ -1161,7 +1161,10 @@
                     "type": "string",
                     "example":"true"
                 },
-                "Reason": {}
+                "Reason": {
+                    "type": "string",
+                    "example":""
+                }
             }
         },
         "Signup": {
