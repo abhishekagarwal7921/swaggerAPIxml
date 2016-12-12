@@ -36,7 +36,7 @@
                         "description": "login",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/LoginRequest"
+                            "$ref": "#/definitions/Login"
                         }
                     }
                 ],
@@ -50,7 +50,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/LoginResponse false"
                         }
                     }
                 }
@@ -1210,7 +1210,7 @@
                 }
             }
         },
-        "LoginRequest": {
+        "Login": {
             "type": "object",
             "properties": {
                 "EmailID": {
@@ -1261,6 +1261,29 @@
                 "MinutesRemaining": {
                     "type": "integer",
                     "format": "int32"
+                }
+            }
+        },
+        "LoginResponse false": {
+            "type": "object",
+            "required": [
+                "Success",
+                "Reason",
+                "ReasonCode"
+            ],
+            "properties": {
+                "Success": {
+                    "type": "string",
+                    "example":"false"
+                },
+                "ReasonCode": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "ReasonCode for failure"
+                },
+                "Reason": {
+                    "type": "string",
+                    "description": "Reason for failure"
                 }
             }
         },
