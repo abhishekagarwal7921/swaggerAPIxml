@@ -1391,7 +1391,7 @@
                     "description": "The reason code why the request failed to complete"
                 },
                 "Reason": {
-                    "type": "string",
+                    "type": "string"
                 }
             }
         },
