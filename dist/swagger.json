@@ -76,7 +76,7 @@
                         "description": "logout",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/CommandRequest"
+                            "$ref": "#/definitions/Logout"
                         }
                     }
                 ],
@@ -84,13 +84,13 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/LogoutResponse"
                         }
                     },
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/LogoutResponse false"
                         }
                     }
                 }
@@ -1185,6 +1185,44 @@
                 "EmailID": {
                     "type": "string",
                     "description": "The emailID to which the validating link has to be sent"
+                }
+            }
+        },
+        "Logout": {
+            "type": "object"
+        },
+        "LogoutResponse": {
+            "type": "object",
+            "required": [
+                "Success"
+            ],
+            "properties": {
+                "Success": {
+                    "type": "string",
+                    "example":"true"
+                }
+            }
+        },
+        "LogoutResponse false": {
+            "type": "object",
+            "required": [
+                "Success",
+                "Reason",
+                "ReasonCode"
+            ],
+            "properties": {
+                "Success": {
+                    "type": "string",
+                    "example":"true"
+                },
+                "ReasonCode": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "ReasonCode for failure"
+                },
+                "Reason": {
+                    "type": "string",
+                    "description": "Reason for failure"
                 }
             }
         },
