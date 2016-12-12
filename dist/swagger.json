@@ -1212,9 +1212,6 @@
         },
         "LoginRequest": {
             "type": "object",
-            "required": [
-                "CommandType"
-            ],
             "properties": {
                 "CommandType": {
                     "type": "string",
@@ -1242,7 +1239,6 @@
         "LoginResponse": {
             "type": "object",
             "required": [
-                "CommandType",
                 "Success",
                 "UserID",
                 "TempPass",
@@ -1250,10 +1246,6 @@
                 "MinutesRemaining"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string",
-                    "description": "Login"
-                },
                 "Success": {
                     "type": "string"
                 },
