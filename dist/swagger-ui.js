@@ -259,7 +259,7 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
 },"5":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "        <h4><span data-sw-translate>Description</span></h4>\n        <div class=\"markdown\">"
+  return "        <h4><span data-sw-translate>Description01</span></h4>\n        <div class=\"markdown\">"
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || helpers.helperMissing).call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.description : depth0),{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
     + "</div>\n";
 },"7":function(container,depth0,helpers,partials,data) {
@@ -281,7 +281,7 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
 },"12":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "          <h4 data-sw-translate>Headers</h4>\n          <table class=\"headers\">\n            <thead>\n              <tr>\n                <th style=\"width: 100px; max-width: 100px\" data-sw-translate>Header</th>\n                <th style=\"width: 310px; max-width: 310px\" data-sw-translate>Description</th>\n                <th style=\"width: 200px; max-width: 200px\" data-sw-translate>Type</th>\n                <th style=\"width: 320px; max-width: 320px\" data-sw-translate>Other</th>\n              </tr>\n            </thead>\n            <tbody>\n"
+  return "          <h4 data-sw-translate>Headers</h4>\n          <table class=\"headers\">\n            <thead>\n              <tr>\n                <th style=\"width: 100px; max-width: 100px\" data-sw-translate>Header</th>\n                <th style=\"width: 310px; max-width: 310px\" data-sw-translate>Description02</th>\n                <th style=\"width: 200px; max-width: 200px\" data-sw-translate>Type</th>\n                <th style=\"width: 320px; max-width: 320px\" data-sw-translate>Other</th>\n              </tr>\n            </thead>\n            <tbody>\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.headers : depth0),{"name":"each","hash":{},"fn":container.program(13, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "            </tbody>\n          </table>\n";
 },"13":function(container,depth0,helpers,partials,data) {
@@ -297,7 +297,7 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
     + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.other : depth0),{"name":"escape","hash":{},"data":data})) != null ? stack1 : "")
     + "</td>\n              </tr>\n";
 },"15":function(container,depth0,helpers,partials,data) {
-    return "          <h4 data-sw-translate>Request to Cloud</h4>\n          <table class='fullwidth parameters'>\n          <thead>\n            <tr>\n            <th style=\"width: 100px; max-width: 100px\" data-sw-translate>Parameter</th>\n            <th style=\"width: 310px; max-width: 310px\" data-sw-translate>Value</th>\n            <th style=\"width: 200px; max-width: 200px\" data-sw-translate>Description</th>\n            <th style=\"width: 100px; max-width: 100px\" data-sw-translate>Parameter Type</th>\n            <th style=\"width: 220px; max-width: 230px\" data-sw-translate>Data Type</th>\n            </tr>\n          </thead>\n          <tbody class=\"operation-params\">\n\n          </tbody>\n          </table>\n";
+    return "          <h4 data-sw-translate>Request to Cloud</h4>\n<table class='fullwidth parameters'>\n<thead>\n<tr>\n<th style=\"width: 100px; max-width: 100px\" data-sw-translate>Request</th>\n<th style=\"width: 310px; max-width: 310px\" data-sw-translate>Payload Model</th>\n<th style=\"width: 200px; max-width: 200px\" data-sw-translate>Description</th>\n<th style=\"width: 100px; max-width: 100px\" data-sw-translate>Parameter Type</th>\n<th style=\"width: 220px; max-width: 230px\" data-sw-translate>Payload(click on Payload Model to copy to here)</th>\n</tr>\n</thead>\n<tbody class=\"operation-params\">\n\n</tbody>\n</table>\n";
 },"17":function(container,depth0,helpers,partials,data) {
     return "          <div style='margin:0;padding:0;display:inline'></div>\n          <h4 data-sw-translate>Other Dynamic And Failure Messages</h4>\n          <table class='fullwidth response-messages'>\n            <thead>\n            <tr>\n              <th data-sw-translate>Response ID</th>\n              <th data-sw-translate>Reason</th>\n              <th data-sw-translate>Response Model</th>\n              <th data-sw-translate>Headers</th>\n            </tr>\n            </thead>\n            <tbody class=\"operation-status\">\n            </tbody>\n          </table>\n";
 },"19":function(container,depth0,helpers,partials,data) {
@@ -610,18 +610,18 @@ templates['param_required'] = template({"1":function(container,depth0,helpers,pa
     return "";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing;
-
+//////////fmp52 : swapping request text area and model
   return "<td class='code required'><label for='"
     + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.valueId : depth0),{"name":"escape","hash":{},"data":data})) != null ? stack1 : "")
     + "'>"
     + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.name : depth0),{"name":"escape","hash":{},"data":data})) != null ? stack1 : "")
-    + "</label></td>\n<td>\n"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.isBody : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(9, data, 0),"data":data})) != null ? stack1 : "")
-    + "</td>\n<td>\n    <strong><span class=\"markdown\">"
+    + "</label></td>\n<td><span class=\"model-signature\"></span></td>\n<td>\n    <strong><span class=\"markdown\">"
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,(depth0 != null ? depth0.description : depth0),{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
     + "</span></strong>\n</td>\n<td>"
     + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.paramType : depth0),{"name":"escape","hash":{},"data":data})) != null ? stack1 : "")
-    + "</td>\n<td><span class=\"model-signature\"></span></td>\n";
+    + "</td>\n<td>\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.isBody : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(9, data, 0),"data":data})) != null ? stack1 : "")
+    + "</td>\n";
 },"useData":true});
 templates['parameter_content_type'] = template({"1":function(container,depth0,helpers,partials,data) {
     var stack1;
