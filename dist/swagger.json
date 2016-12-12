@@ -210,7 +210,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -250,7 +250,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -290,7 +290,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -330,7 +330,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -370,7 +370,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -410,7 +410,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -444,7 +444,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -484,7 +484,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -524,7 +524,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -564,7 +564,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -604,7 +604,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -644,7 +644,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -684,7 +684,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -724,7 +724,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -764,7 +764,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -804,7 +804,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultFalse"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
