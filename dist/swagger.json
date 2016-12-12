@@ -856,7 +856,7 @@
                     "type": "string"
                 },
                 "RegID": {
-                    "type": "string",
+                    "type": "string"
                 },
                 "Platform": {
                     "type": "string",
