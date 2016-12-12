@@ -116,7 +116,7 @@
                         "description": "logout all",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/LogoutAllRequest"
+                            "$ref": "#/definitions/LogoutAll"
                         }
                     }
                 ],
@@ -124,7 +124,7 @@
                     "200": {
                         "description": "Success true response",
                         "schema": {
-                            "$ref": "#/definitions/DefaultTrue"
+                            "$ref": "#/definitions/LogoutAllResponse"
                         }
                     },
                     "default": {
@@ -1188,18 +1188,25 @@
                 }
             }
         },
-        "LogoutAllRequest": {
+        "LogoutAllResponse": {
             "type": "object",
             "required": [
-                "CommandType",
+                "Success"
+            ],
+            "properties": {
+                "Success": {
+                    "type": "string",
+                    "example":"true"
+                }
+            }
+        },
+        "LogoutAll": {
+            "type": "object",
+            "required": [
                 "EmailID",
                 "Password"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string",
-                    "description": "Login"
-                },
                 "EmailID": {
                     "type": "string",
                     "description": "EmailID as credential"
