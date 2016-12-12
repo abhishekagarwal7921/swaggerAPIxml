@@ -450,7 +450,7 @@
                 }
             }
         },
-        "/0113notification_preference_list": {
+        "/0113Notification preference list": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -530,7 +530,7 @@
                 }
             }
         },
-        "/0281AddNotificationReg": {
+        "/0281Add Notification Reg": {
             "post": {
                 "tags": [
                     "XML_commands"
@@ -570,7 +570,7 @@
                 }
             }
         },
-        "/0283DeleteNotificationReg": {
+        "/0283Delete Notification Reg": {
             "delete": {
                 "tags": [
                     "XML_commands"
@@ -610,7 +610,7 @@
                 }
             }
         },
-        "/0291NotificationPreferance_check_my_regid": {
+        "/0291Notification Preferance check my regid": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -625,7 +625,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "NotificationPreferances Request",
+                        "name": "Notification Preferances Request",
                         "in": "body",
                         "description": "Notification Preferance check my regid",
                         "required": true,
@@ -650,7 +650,7 @@
                 }
             }
         },
-        "/0300NotificationPreferance_update_notification_preferences": {
+        "/0300Notification Preferance update notification preferences": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -665,7 +665,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "NotificationPreferances Request",
+                        "name": "Notification Preferances Request",
                         "in": "body",
                         "description": "update notification preferences",
                         "required": true,
@@ -690,7 +690,7 @@
                 }
             }
         },
-        "/0800NotificationPreferance_get_notifications": {
+        "/0800Notification Preferance get notifications": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -705,7 +705,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "NotificationPreferances Request",
+                        "name": "Notification Preferances Request",
                         "in": "body",
                         "description": "get notifications",
                         "required": true,
@@ -730,7 +730,7 @@
                 }
             }
         },
-        "/0804NotificationPreferance_get_logs": {
+        "/0804Notification Preferance get logs": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -745,7 +745,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "NotificationPreferances Request",
+                        "name": "Notification Preferances Request",
                         "in": "body",
                         "description": "get logs",
                         "required": true,
@@ -770,7 +770,7 @@
                 }
             }
         },
-        "/0806NotificationPreferance_clear_the_badge": {
+        "/0806Notification Preferance clear the badge": {
             "get": {
                 "tags": [
                     "XML_commands"
@@ -785,7 +785,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "NotificationPreferances Request",
+                        "name": "Notification Preferances Request",
                         "in": "body",
                         "description": "clear the badge",
                         "required": true,
