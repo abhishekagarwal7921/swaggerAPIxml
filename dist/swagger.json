@@ -430,7 +430,7 @@
                         "description": "Get Device Data",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/GetListRequest"
+                            "$ref": "#/definitions/GetDeviceDataRequest"
                         }
                     }
                 ],
@@ -470,7 +470,7 @@
                         "description": "notification preference list",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/GetListRequest"
+                            "$ref": "#/definitions/GetNotificationPreferenceList"
                         }
                     }
                 ],
@@ -815,7 +815,6 @@
         "NotificationPreferances": {
             "type": "object",
             "required": [
-                "CommandType",
                 "AlmondMAC",
                 "UserID",
                 "Preference",
@@ -823,16 +822,15 @@
                 "MobileInternalIndex"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "AlmondMAC": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
+                    "example": 251176215907188
                 },
                 "UserID": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
+                    "example": 522242557
                 },
                 "Preference": {
                     "type": "integer",
@@ -850,7 +848,6 @@
         "NotificationReg": {
             "type": "object",
             "required": [
-                "CommandType",
                 "RegID",
                 "Platform"
             ],
@@ -859,11 +856,11 @@
                     "type": "string"
                 },
                 "RegID": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "string",
                 },
                 "Platform": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Andriod"
                 }
             }
         },
@@ -912,7 +909,6 @@
         "NotificationPreferenceList": {
             "type": "object",
             "required": [
-                "CommandType",
                 "Success",
                 "AlmondMAC",
                 "Preferance Count",
@@ -921,15 +917,14 @@
                 "Mode"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "Success": {
-                    "type": "string"
+                    "type": "string",
+                    "example":"true"
                 },
                 "AlmondMAC": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
+                    "example": 251176215907188
                 },
                 "Preferance Count": {
                     "type": "integer",
@@ -951,7 +946,6 @@
         "DeviceDataResponse": {
             "type": "object",
             "required": [
-                "CommandType",
                 "Success",
                 "ID",
                 "Name",
@@ -964,11 +958,9 @@
                 "Model"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "Success": {
-                    "type": "string"
+                    "type": "string",
+                    "example":"true"
                 },
                 "ID": {
                     "type": "integer",
@@ -1007,51 +999,55 @@
         "DeviceDataHashResponse": {
             "type": "object",
             "required": [
-                "CommandType",
                 "Success",
                 "StaticDeviceListHash"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "Success": {
-                    "type": "string"
+                    "type": "string",
+                    "example":"true"
                 },
                 "StaticDeviceListHash": {
                     "type": "string"
                 }
             }
         },
-        "GetListRequest": {
+        "GetDeviceDataRequest": {
             "type": "object",
             "required": [
-                "CommandType",
                 "AlmondMAC"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "AlmondMAC": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
+                    "example": 251176215907188
+                }
+            }
+        },
+        "GetNotificationPreferenceList": {
+            "type": "object",
+            "required": [
+                "AlmondMAC"
+            ],
+            "properties": {
+                "AlmondMAC": {
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 251176215907188
                 }
             }
         },
         "DeviceDataHashRequest": {
             "type": "object",
             "required": [
-                "CommandType",
                 "AlmondMAC"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "AlmondMAC": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "int64",
+                    "example": 251176215907188
                 }
             }
         },
@@ -1371,23 +1367,6 @@
                 },
                 "Reason": {
                     "type": "string"
-                }
-            }
-        },
-        "CommandRequest": {
-            "type": "object",
-            "description": "Requests with just the commandType",
-            "required": [
-                "CommandType"
-            ],
-            "properties": {
-                "CommandType": {
-                    "type": "string",
-                    "enum": [
-                        "GetAlmondList",
-                        "AffiliationData",
-                        "UserProfileRequest"
-                    ]
                 }
             }
         }
