@@ -1189,7 +1189,8 @@
             }
         },
         "Logout": {
-            "type": "object"
+            "type": "object",
+            "properties": {}
         },
         "LogoutResponse": {
             "type": "object",
