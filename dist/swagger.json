@@ -1093,15 +1093,11 @@
         "VerifyResetPasswordRequest": {
             "type": "object",
             "required": [
-                "CommandType",
                 "EmailID",
                 "NewPassword",
                 "token"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "EmailID": {
                     "type": "string"
                 },
@@ -1117,13 +1113,9 @@
         "ResetPasswordRequest": {
             "type": "object",
             "required": [
-                "CommandType",
                 "EmailID"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "EmailID": {
                     "type": "string",
                     "description": "The emailID to which reset password link has to be sent"
@@ -1133,14 +1125,10 @@
         "VerifyAccountRequest": {
             "type": "object",
             "required": [
-                "CommandType",
                 "EmailID",
                 "token"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string"
-                },
                 "EmailID": {
                     "type": "string"
                 },
