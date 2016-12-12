@@ -130,7 +130,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/LoginResponse false"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -170,7 +170,7 @@
                     "default": {
                         "description": "error response",
                         "schema": {
-                            "$ref": "#/definitions/LoginResponse false"
+                            "$ref": "#/definitions/<Request>Response false"
                         }
                     }
                 }
@@ -1153,18 +1153,13 @@
         "SignupResponse": {
             "type": "object",
             "required": [
-                "Success",
-                "Reason"
+                "Success"
             ],
             "properties": {
                 "Success": {
                     "type": "string",
                     "example":"true"
-                },
-                "Reason": {
-                    "type": "string",
-                    "example":""
-                }
+                }                
             }
         },
         "Signup": {
@@ -1371,26 +1366,20 @@
                 }
             }
         },
-        "DefaultFalse": {
+        "<Request>Response false": {
             "type": "object",
+            "description":" This is the default false response for many requests",
             "required": [
-                "CommandType",
                 "Success",
-                "Reason"
+                "Reason",
+                "ReasonCode"
             ],
             "properties": {
-                "CommandType": {
-                    "type": "string",
-                    "enum": [
-                        "DeleteAccountResponse",
-                        "UnlinkAlmondResponse"
-                    ]
-                },
                 "Success": {
                     "type": "string",
                     "example": "false"
                 },
-                "Reason": {
+                "ReasonCode": {
                     "type": "integer",
                     "enum": [
                         1,
@@ -1401,10 +1390,8 @@
                     "format": "int32",
                     "description": "The reason code why the request failed to complete"
                 },
-                "AlmondMAC": {
-                    "type": "integer",
-                    "format": "int64",
-                    "example": 251176216342984
+                "Reason": {
+                    "type": "string",
                 }
             }
         },
