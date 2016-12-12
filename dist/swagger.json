@@ -465,7 +465,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "notification_preference_list Request",
+                        "name": "notification preference list Request",
                         "in": "body",
                         "description": "notification preference list",
                         "required": true,
